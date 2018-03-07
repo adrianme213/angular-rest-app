@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { GizmoComponent } from './gizmo/gizmo.component';
 import { NachosComponent } from './nachos/nachos.component';
 import { FizzbuzzComponent } from './fizzbuzz/fizzbuzz.component';
+import { WidgetsComponent } from './widgets/widgets.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FizzbuzzComponent } from './fizzbuzz/fizzbuzz.component';
     ItemDetailComponent,
     GizmoComponent,
     NachosComponent,
-    FizzbuzzComponent
+    FizzbuzzComponent,
+    WidgetsComponent
   ],
   imports: [
     BrowserAnimationsModule,

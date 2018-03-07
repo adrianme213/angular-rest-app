@@ -12,5 +12,6 @@ export class AppComponent {
     { path: '/items', icon: 'list', label: 'Items'},
     { path: '/fizzbuzz', icon: 'view_quilt', label: 'Fizzbuzz'},
     { path: '/gizmo', icon: 'date_range', label: 'Gizmo'},
+    { path: '/widgets', icon: 'pan_tool', label: 'Widgets'}
   ];
 }

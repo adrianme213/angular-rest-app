@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component ({
   selector: 'app-fizzbuzz',
@@ -6,7 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./fizzbuzz.component.css']
 })
 
-export class FizzbuzzComponent {
+export class FizzbuzzComponent implements OnInit {
   daVar: string = 'This is the display variable bro';
   color: string = 'blue';
+
+  constructor() {
+
+  }
+
+  ngOnInit() {
+
+  }
+
+  echo(daColor) {
+    console.log(`Message ${daColor}`)
+  }
+
+
 }

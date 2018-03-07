@@ -4,12 +4,14 @@ import { ItemsComponent } from './items/items.component';
 import { HomeComponent } from './home/home.component';
 import { GizmoComponent } from './gizmo/gizmo.component';
 import { FizzbuzzComponent } from './fizzbuzz/fizzbuzz.component';
+import { WidgetsComponent } from './widgets/widgets.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'items', component: ItemsComponent},
   {path: 'gizmo', component: GizmoComponent},
   {path: 'fizzbuzz', component: FizzbuzzComponent},
+  {path: 'widgets', component: WidgetsComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

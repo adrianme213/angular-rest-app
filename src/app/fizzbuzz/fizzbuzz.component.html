@@ -1,2 +1,4 @@
 <h2>dis is the FizzBuzz page</h2>
+<input mdInput placeholder="Enter color" [(ngModel)]="color" type="text" name="color">
 <h3 [style.color]="color">{{ color }}</h3>
+<button type="button" md-button (click)="echo(color)">Holla Holla Bling Bling</button>
