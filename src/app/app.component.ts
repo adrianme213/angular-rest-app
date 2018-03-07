@@ -9,6 +9,8 @@ export class AppComponent {
   title = 'Angular REST App';
   links = [
     { path: '/home', icon: 'home', label: 'Home'},
-    { path: '/items', icon: 'list', label: 'Items'}
+    { path: '/items', icon: 'list', label: 'Items'},
+    { path: '/fizzbuzz', icon: 'view_quilt', label: 'Fizzbuzz'},
+    { path: '/gizmo', icon: 'date_range', label: 'Gizmo'},
   ];
 }

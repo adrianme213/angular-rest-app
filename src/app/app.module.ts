@@ -14,6 +14,9 @@ import { ItemsComponent } from './items/items.component';
 import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemDetailComponent } from './items/item-detail/item-detail.component';
 import { HomeComponent } from './home/home.component';
+import { GizmoComponent } from './gizmo/gizmo.component';
+import { NachosComponent } from './nachos/nachos.component';
+import { FizzbuzzComponent } from './fizzbuzz/fizzbuzz.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     ItemsComponent,
     ItemsListComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    GizmoComponent,
+    NachosComponent,
+    FizzbuzzComponent
   ],
   imports: [
     BrowserAnimationsModule,
