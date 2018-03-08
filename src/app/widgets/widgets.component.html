@@ -29,16 +29,19 @@
     <md-card>
       <md-card-header>
         <md-card-title>
-          <h1>Select a Widget</h1>
+          <h1>
+            <span *ngIf="selectedWidget; else prompt">Editing {{ selectedWidget.name }}</span>
+            <ng-template #prompt>Select a Widget</ng-template>
+          </h1>
         </md-card-title>
       </md-card-header>
       <form>
-        <md-card-content>
+        <md-card-content *ngIf="selectedWidget">
           <pre>{{ selectedWidget | json}}</pre>
         </md-card-content>
         <md-card-actions>
           <button type="submit" md-button>Save</button>
-          <button type="button" md-button>Cancel</button>
+          <button type="button" md-button (click)="selected(null)">Cancel</button>
         </md-card-actions>
       </form>
     </md-card>
