@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app-material.module';
 
-import { ItemsService } from './shared';
+import { ItemsService, CaffeineService, WidgetsService } from './shared';
 
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './items/items.component';
@@ -39,7 +39,7 @@ import { WidgetsComponent } from './widgets/widgets.component';
     AppRoutingModule,
     AppMaterialModule
   ],
-  providers: [ItemsService],
+  providers: [ItemsService, CaffeineService, WidgetsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

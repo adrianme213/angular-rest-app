@@ -4,5 +4,7 @@
   </div>
 
   <div class="col-50">
+    <p *ngFor="let source of sources">{{ source }}</p>
+    <p *ngFor="let widget of widgets">{{ widget.name }} : {{ widget.description }}</p>
   </div>
 </div>

@@ -35,13 +35,31 @@
           </h1>
         </md-card-title>
       </md-card-header>
-      <form>
-        <md-card-content *ngIf="selectedWidget">
-          <pre>{{ selectedWidget | json}}</pre>
+      <form
+        #myForm="ngForm"
+        (submit)="saved.emit(selectedWidget)">
+        <md-card-content>
+          <md-input-container class="full-width">
+            <input
+              required
+              mdInput placeholder="Name"
+              [(ngModel)]="selectedWidget.name"
+              type="text" name="name">
+          </md-input-container>
+          <md-input-container>
+            <input
+              mdInput placeholder="Description"
+              [(ngModel)]="selectedWidget.description"
+              type="text" name="description">
+          </md-input-container>
+          <hr>
+          <pre>{{ myForm.value | json }}</pre>
+          <hr>
+          {{ myForm.valid }}
         </md-card-content>
         <md-card-actions>
-          <button type="submit" md-button>Save</button>
-          <button type="button" md-button (click)="selected(null)">Cancel</button>
+          <button type="submit" md-button [disabled]="!myForm.valid">Save</button>
+          <button type="button" md-button (click)="cancel()">Cancel</button>
         </md-card-actions>
       </form>
     </md-card>
