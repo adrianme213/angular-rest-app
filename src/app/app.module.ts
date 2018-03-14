@@ -18,6 +18,8 @@ import { GizmoComponent } from './gizmo/gizmo.component';
 import { NachosComponent } from './nachos/nachos.component';
 import { FizzbuzzComponent } from './fizzbuzz/fizzbuzz.component';
 import { WidgetsComponent } from './widgets/widgets.component';
+import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
+import { WidgetsDetailComponent } from './widgets/widgets-detail/widgets-detail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { WidgetsComponent } from './widgets/widgets.component';
     GizmoComponent,
     NachosComponent,
     FizzbuzzComponent,
-    WidgetsComponent
+    WidgetsComponent,
+    WidgetsListComponent,
+    WidgetsDetailComponent
   ],
   imports: [
     BrowserAnimationsModule,

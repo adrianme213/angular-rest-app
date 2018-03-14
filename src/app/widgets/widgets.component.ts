@@ -21,16 +21,20 @@ export class WidgetsComponent implements OnInit {
     this.selectedWidget = { id: null, name: '', description: '' };
   }
 
-  save(widget) {
+  saveWidget(widget) {
     console.log('Saving Widget', widget);
     this.reset();
   }
 
-  selected(widget) {
+  deleteWidget(widget) {
+    console.log('Delete Widget ', widget);
+  }
+
+  selectWidget(widget) {
     this.selectedWidget = widget;
   }
 
-  cancel() {
+  cancel(widget) {
     this.reset();
   }
 
