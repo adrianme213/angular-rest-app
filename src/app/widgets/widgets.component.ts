@@ -13,8 +13,17 @@ export class WidgetsComponent implements OnInit {
   constructor(private widgetsService: WidgetsService) { }
 
   ngOnInit() {
-    this.widgets = this.widgetsService.widgets;
+    this.all();
     this.reset();
+  }
+
+  all() {
+    this.widgetsService.loadWidgets()
+      .subscribe(widgets => this.widgets = widgets);
+  }
+
+  selectWidget(widget) {
+    this.selectedWidget = widget;
   }
 
   reset() {
@@ -22,17 +31,37 @@ export class WidgetsComponent implements OnInit {
   }
 
   saveWidget(widget) {
-    console.log('Saving Widget', widget);
-    this.reset();
+    if (!widget.id) {
+      this.createWidget(widget);
+    } else {
+      this.updateWidget(widget);
+    }
+  }
+
+  createWidget(widget) {
+    this.widgetsService.create(widget)
+      .subscribe(result => {
+      this.all();
+      this.reset();
+    })
+  }
+
+  updateWidget(widget) {
+    this.widgetsService.update(widget)
+      .subscribe(result =>{
+        this.all();
+        this.reset();
+      })
   }
 
   deleteWidget(widget) {
-    console.log('Delete Widget ', widget);
+    this.widgetsService.delete(widget)
+      .subscribe(result => {
+        this.all();
+        this.reset();
+      })
   }
 
-  selectWidget(widget) {
-    this.selectedWidget = widget;
-  }
 
   cancel(widget) {
     this.reset();

@@ -18,12 +18,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getItems();
+    this.loadWidgets();
     this.sources = this.caffeineService.sources;
-    this.widgets = this.widgetsService.widgets;
   }
 
   getItems() {
     this.itemsService.all()
       .subscribe(items => this.items = items);
+  }
+
+  loadWidgets() {
+    this.widgetsService.loadWidgets()
+      .subscribe(widgets => this.widgets = widgets);
   }
 }
