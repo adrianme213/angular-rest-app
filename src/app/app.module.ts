@@ -20,6 +20,7 @@ import { FizzbuzzComponent } from './fizzbuzz/fizzbuzz.component';
 import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetsListComponent } from './widgets/widgets-list/widgets-list.component';
 import { WidgetsDetailComponent } from './widgets/widgets-detail/widgets-detail.component';
+import { ItemsSearchComponent } from './items/items-search/items-search.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { WidgetsDetailComponent } from './widgets/widgets-detail/widgets-detail.
     FizzbuzzComponent,
     WidgetsComponent,
     WidgetsListComponent,
-    WidgetsDetailComponent
+    WidgetsDetailComponent,
+    ItemsSearchComponent
   ],
   imports: [
     BrowserAnimationsModule,

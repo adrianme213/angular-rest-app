@@ -31,4 +31,8 @@ export class HomeComponent implements OnInit {
     this.widgetsService.loadWidgets()
       .subscribe(widgets => this.widgets = widgets);
   }
+
+  handleResults(items) {
+    this.items = items;
+  }
 }
